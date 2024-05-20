@@ -90,4 +90,5 @@ while 1>0:
        cc_counter=cc[j]+cc_counter
    if cc_counter:
         print(' ')
+        #音乐提示
         winsound.PlaySound('C:/untitled1/10367.wav',flags=0)#flags=0,winsound.SND_ALIAS  32位电脑上用后面的参数
