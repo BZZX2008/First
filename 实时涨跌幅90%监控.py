@@ -12,7 +12,7 @@ for i in range(len(bbb)):
     ccc = osss+'/'+bbb[i]
 
 print(ccc)
-#excel=xlrd.open_workbook('c:/20180730强平打印表.xls')
+#excel=xlrd.open_workbook('c:/20180730表.xls')
 excel = xlrd.open_workbook(ccc)
 data = excel.sheet_by_name("结算价")
 
