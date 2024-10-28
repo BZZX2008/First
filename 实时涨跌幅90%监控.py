@@ -21,10 +21,8 @@ data = excel.sheet_by_name("结算价")
 #print (time1)
 ##########################################################################################################################
 def get_stock_info(stock_no, num_retries=2):
-    # try:
-    # url = 'http://nufm.dfcfw.com/EM_Finance2014NumericApplication/JS.aspx?type=CT&cmd='+stock_no.strip()+'2&sty=CTBF&st=z&sr=&p=&ps=&cb=var%20pie_data=&js=(x)&token=28758b27a75f62dc3065b81f7facb365&_=1496312544427'
-    url = 'http://hq.sinajs.cn/?_=1531364348612/&list=nf_' + stock_no.strip()
-    #url = "https://hq.sinajs.cn/rn=" + str(round(time.time() * 1000)) + "&list=" + stock_no.strip()
+    # try: 
+    url = '此处需要添加链接' + stock_no.strip()
     headers = {'User-agent': 'WSWP', 'referer': 'http://finance.sina.com.cn'}
     request = urllib.request.Request(url, headers=headers)#形成一个对象
     page = urllib.request.urlopen(request)
