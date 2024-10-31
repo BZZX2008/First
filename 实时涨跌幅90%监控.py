@@ -24,10 +24,13 @@ def get_stock_info(stock_no, num_retries=2):
     # try: 
     url = '此处需要添加链接' + stock_no.strip()
     headers = {'User-agent': 'WSWP', 'referer': 'http://finance.sina.com.cn'}
-    request = urllib.request.Request(url, headers=headers)#形成一个对象
-    page = urllib.request.urlopen(request)
-    page_content = page.read().decode('gbk')
-    return page_content
+    　# 发送GET请求
+    response = requests.get(url, headers=headers)
+      # 检查响应状态码
+    if response.status_code == 200:
+        # 解码响应内容
+        content = response.content.decode('GB18030')
+    return content
 ##########################################################################################################################
 b=[]
 a=list(set(zip(data.col_values(4),data.col_values(7),data.col_values(8))))#提取4=合约号，7=90%涨幅，8=90%跌幅
